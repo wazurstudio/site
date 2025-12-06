@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WazurStudio - Création de Sites Web</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>wazur<span class="studio">STUDIO</span></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="tarif.html">Tarif</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="page-header">
+        <div class="container">
+            <h1>Nos Tarifs</h1>
+            <p>Des solutions complètes pour votre présence en ligne</p>
+        </div>
+    </section>
+     <div class="container">
+        <h2>Nos Services</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <tr>
+                        <th>#</th>
+                        <th>Service</th>
+                        <th>Catégorie</th>
+                        <th class="center">C'est quoi ?</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="service-number">01</td>
+                        <td class="service-name">Site Vitrine</td>
+                        <td><span class="badge web">Présence en ligne</span></td>
+                        <td>Un site vitrine sert à présenter une entreprise et<br> ses services sur Internet, comme une carte de visite en ligne.</td>
+                        <td class="price">500€</td>
+                    </tr>
+                    <tr>
+                        <td class="service-number">02</td>
+                        <td class="service-name">Site One Page</td>
+                        <td><span class="badge ecommerce">Présentation simplifiée</span></td>
+                        <td>Un site one page est un site avec une seule page où tout le <br>contenu se trouve en défilement continu.</td>
+                        <td class="price">200€</td>
+                    </tr>
+                    <tr>
+                        <td class="service-number">03</td>
+                        <td class="service-name">Landing Page Marketing</td>
+                        <td><span class="badge app">Conversion & Marketing</span></td>
+                        <td>Une landing page marketing est une page unique faite pour<br> attirer des visiteurs et les faire agir.</td>
+                        <td class="price">100€</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</div>
+<br>
+<br>
+<br>
+<section class="cta">
+        <div class="container">
+            <h2>Discutons de votre projet</h2>
+            <p>Chaque projet est unique. Contactez-nous pour un devis personnalisé</p>
+            <a href="contact.html" class="btn btn-primary">Nous contacter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>wazur<span class="studio">STUDIO</span></h3>
+                    <p>Votre partenaire pour une présence web exceptionnelle</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="tarif.html">Tarif</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                   <p>Email: wazurstudio.contact@gmail.com</p>
+                   <p>Tél: +33 x xx xx xx xx</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 WazurStudio. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

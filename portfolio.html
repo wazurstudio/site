@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - WazurStudio</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>wazur<span class="studio">STUDIO</span></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="tarif.html">Tarif</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <script>
+                     function msg1() { alert("Pas encore de site vitrine"); }
+                     function msg2() { alert("Pas encore de site one page"); }
+                     function msg3() { alert("Pas encore de landing page marketing"); }
+                </script>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Notre Portfolio</h1>
+            <p>Découvrez nos réalisations et projets récents</p>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <div class="container">
+            <div class="portfolio-filters">
+                <button class="filter-btn" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="maquette">Maquettes</button>
+                <button class="filter-btn" data-filter="vitrine" onclick="msg1()">Site Vitrine</button>
+                <button class="filter-btn" data-filter="one" onclick="msg2()">Site One Page</button>
+                <button class="filter-btn" data-filter="page" onclick="msg3()">Landing Page Marketing</button>
+            </div>
+<!--carte maquette-->
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="maquette">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <img src="./photo/maquettebois.png" alt="Maquette en bois" width="100%" height="100%">
+                        <div class="portfolio-overlay">
+                            <h3>Maquette one page</h3> <!--titre-->
+                            <p>Maquette réalisé à la main avec finitions détaillées.</p>  <!--descriptif-->
+                            <div class="portfolio-tags">
+                                <span>Code utilisé :</span> <!--code utiliser-->
+                                <span>HTML</span>    <!--code utiliser-->
+                                <span>CSS</span>  <!--code utiliser-->
+                                <li class="bouton-afficher">
+                                    <a href="./maquette/maquette.onepage.html">Afficher</a>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="portfolio-item" data-category="maquette">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);">
+                    <img src="./photo/maquette1.png" alt="Maquette en bois" width="100%" height="100%">
+                        <div class="portfolio-overlay">
+                            <h3>Maquette site vitrine</h3> <!--titre-->
+                            <p>Maquette faite main aux finitions soignées.</p>  <!--descriptif-->
+                            <div class="portfolio-tags">
+                                <span>Code utilisé :</span> <!--code utiliser-->
+                                <span>HTML</span>    <!--code utiliser-->
+                                <span>CSS</span>  <!--code utiliser-->
+                                <li class="bouton-afficher">
+                                    <a href="./maquette/1.html">Afficher</a>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="maquette">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                    <img src="./photo/maquette3.png" alt="Maquette en bois" width="100%" height="100%">
+                        <div class="portfolio-overlay">
+                            <h3>Maquette Landing Page Marketing</h3> <!--titre-->
+                            <p>Maquette faite main, finitions soignées.</p>  <!--descriptif-->
+                            <div class="portfolio-tags">
+                                <span>Code utilisé :</span> <!--code utiliser-->
+                                <span>HTML</span>    <!--code utiliser-->
+                                <span>CSS</span>  <!--code utiliser-->
+                                <li class="bouton-afficher">
+                                    <a href="./maquette/Landing.Page.Marketing.html">Afficher</a>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!--carte site vitrine-->
+
+                <!--<div class="portfolio-item" data-category="vitrine">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <div class="portfolio-overlay">
+                            <h3>#</h3> <!--titre
+                            <p>#</p>  <!--descriptif
+                            <div class="portfolio-tags">
+                                <span>#</span> <!--code utiliser
+                                <span>#</span>    <!--code utiliser
+                                <span>#</span>  <!--code utiliser
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <!--<div class="portfolio-item" data-category="vitrine">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                        <div class="portfolio-overlay">
+                            <h3>#</h3> <!--titre
+                            <p>#</p>  <!--descriptif
+                            <div class="portfolio-tags">
+                                <span>#</span> <!--code utiliser
+                                <span>#</span>    <!--code utiliser
+                                <span>#</span>  <!--code utiliser
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+               <!-- <div class="portfolio-item" data-category="vitrine">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);">
+                        <div class="portfolio-overlay">
+                            <h3>#</h3> <!--titre
+                            <p>#</p>  <!--descriptif
+                            <div class="portfolio-tags">
+                                <span>#</span> <!--code utiliser
+                                <span>#</span>    <!--code utiliser
+                                <span>#</span>  <!--code utiliser-
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+
+<!--carte one page-->
+
+                <!--<div class="portfolio-item" data-category="one">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <div class="portfolio-overlay">
+                            <h3>#</h3> <!--titre
+                            <p>#</p>  <!--descriptif
+                            <div class="portfolio-tags">
+                                <span>#</span> <!--code utiliser
+                                <span>#</span>    <!--code utiliser
+                                <span>#</span>  <!--code utiliser
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                 <!--<div class="portfolio-item" data-category="one">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <div class="portfolio-overlay">
+                            <h3>#</h3> <!--titre
+                            <p>#</p>  <!--descriptif
+                            <div class="portfolio-tags">
+                                <span>#</span> <!--code utiliser
+                                <span>#</span>    <!--code utiliser
+                                <span>#</span>  <!--code utiliser
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <!--<div class="portfolio-item" data-category="one">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);">
+                        <div class="portfolio-overlay">
+                            <h3>#</h3> <!--titre
+                            <p>#</p>  <!--descriptif
+                            <div class="portfolio-tags">
+                                <span>#</span> <!--code utiliser
+                                <span>#</span>    <!--code utiliser
+                                <span>#</span>  <!--code utiliser
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+
+<!--carte Landing Page Marketing-->
+
+               <!-- <div class="portfolio-item" data-category="page">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <div class="portfolio-overlay">
+                            <h3>#</h3> <!--titre
+                            <p>#</p>  <!--descriptif
+                            <div class="portfolio-tags">
+                                <span>#</span> <!--code utiliser
+                                <span>#</span>    <!--code utiliser
+                                <span>#</span>  <!--code utiliser
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <!--<div class="portfolio-item" data-category="page">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                        <div class="portfolio-overlay">
+                            <h3>#</h3> <!--titre
+                            <p>#</p>  <!--descriptif
+                            <div class="portfolio-tags">
+                                <span>#</span> <!--code utiliser
+                                <span>#</span>    <!--code utiliser
+                                <span>#</span>  <!--code utiliser
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <!--<div class="portfolio-item" data-category="page">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="portfolio-overlay">
+                           <h3>#</h3> <!--titre
+                            <p>#</p>  <!--descriptif
+                            <div class="portfolio-tags">
+                                <span>#</span> <!--code utiliser
+                                <span>#</span>    <!--code utiliser
+                                <span>#</span>  <!--code utiliser
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Projets Réalisés</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">Clients Satisfaits</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Années d'Expérience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Taux de Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <section class="cta">
+        <div class="container">
+            <h2>Votre projet mérite le meilleur</h2>
+            <p>Travaillons ensemble pour créer quelque chose d'extraordinaire</p>
+            <a href="contact.html" class="btn btn-primary">Lancez votre projet</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>wazur<span class="studio">STUDIO</span></h3>
+                    <p>Votre partenaire pour une présence web exceptionnelle</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="tarif.html">Tarif</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                   <p>Email: wazurstudio.contact@gmail.com</p>
+                   <p>Tél: +33 x xx xx xx xx</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 WazurStudio. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Portfolio Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

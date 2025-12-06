@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation Digitale</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #10b981, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #10b981;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(16, 185, 129, 0.15), transparent 50%),
+                        radial-gradient(circle at 70% 50%, rgba(52, 211, 153, 0.1), transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            max-width: 900px;
+            padding: 0 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 72px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #10b981, #34d399, #6ee7b7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: #9ca3af;
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #10b981;
+            border: 2px solid #10b981;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(16, 185, 129, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .features {
+            padding: 100px 50px;
+            background: #000;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, #10b981, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: #10b981;
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .feature-description {
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
+        .stats {
+            padding: 100px 50px;
+            background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 56px;
+            font-weight: bold;
+            color: #10b981;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #9ca3af;
+            font-size: 18px;
+        }
+
+        .cta-section {
+            padding: 120px 50px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(16, 185, 129, 0.1), transparent 70%);
+        }
+
+        .cta-section h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            color: #9ca3af;
+            margin-bottom: 40px;
+        }
+
+        footer {
+            padding: 40px 50px;
+            text-align: center;
+            background: #000;
+            border-top: 1px solid rgba(16, 185, 129, 0.2);
+            color: #9ca3af;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 42px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .features, .stats, .cta-section {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">maquette</div>
+        <ul class="nav-links">
+            <li><a href="../portfolio.html">retour portfolio</a></li>
+            <li><a href="#features">Fonctionnalités</a></li>
+            <li><a href="#stats">Statistiques</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>L'avenir Digital Commence Ici</h1>
+            <p class="subtitle">Transformez votre vision en réalité avec nos solutions innovantes et performantes</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Commencer Maintenant</a>
+                <a href="#" class="btn btn-secondary">En Savoir Plus</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2 class="section-title">Nos Fonctionnalités</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">Performance Ultra-Rapide</h3>
+                <p class="feature-description">Des temps de chargement optimisés pour une expérience utilisateur exceptionnelle.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3 class="feature-title">Sécurité Maximale</h3>
+                <p class="feature-description">Protection avancée de vos données avec les dernières technologies de cryptage.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">Analytics Avancés</h3>
+                <p class="feature-description">Suivez vos performances en temps réel avec des tableaux de bord intuitifs.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3 class="feature-title">Design Moderne</h3>
+                <p class="feature-description">Interface élégante et responsive adaptée à tous les appareils.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3 class="feature-title">Évolutivité</h3>
+                <p class="feature-description">Solutions scalables qui grandissent avec votre entreprise.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3 class="feature-title">Support 24/7</h3>
+                <p class="feature-description">Notre équipe est disponible à tout moment pour vous accompagner.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats" id="stats">
+        <h2 class="section-title">Ils Nous Font Confiance</h2>
+        <div class="stats-grid">
+            <div>
+                <div class="stat-number">10K+</div>
+                <div class="stat-label">Clients Satisfaits</div>
+            </div>
+            <div>
+                <div class="stat-number">99.9%</div>
+                <div class="stat-label">Disponibilité</div>
+            </div>
+            <div>
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Pays</div>
+            </div>
+            <div>
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Support</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+        <h2>Prêt à Commencer?</h2>
+        <p>Rejoignez des milliers d'entreprises qui ont choisi l'excellence</p>
+        <a href="#" class="btn btn-primary">Démarrer Gratuitement</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Nexus. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

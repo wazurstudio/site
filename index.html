@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WazurStudio - Création de Sites Web</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>wazur<span class="studio">STUDIO</span></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="tarif.html">Tarif</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Créons ensemble votre présence digitale</h2>
+                <p class="hero-subtitle">Des sites web modernes, performants et sur mesure pour propulser votre entreprise</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn btn-primary">Démarrer un projet</a>
+                    <a href="portfolio.html" class="btn btn-secondary">Voir nos réalisations</a>
+                </div>
+            </div>
+            <div class="hero-animation">
+                <div class="floating-card card-1"><img src="./photo/web.jpg" class="rounded" alt="image pc code" width="250px" height="180px"/></div>
+                <div class="floating-card card-2"><img src="./photo/code.png" class="rounded" alt="Wazur Studio" width="200px" height="150px"/></div>
+                <div class="floating-card card-3"><img src="./photo/WazurStudio.png" class="rounded" alt="log Wazur Studio" width="180px" height="130px"/></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Pourquoi choisir WazurStudio ?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Performance optimale</h3>
+                    <p>Des sites ultra-rapides optimisés pour le SEO et l'expérience utilisateur</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Design moderne</h3>
+                    <p>Des interfaces élégantes et intuitives qui reflètent votre identité</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Responsive</h3>
+                    <p>Parfaitement adapté à tous les écrans, du mobile au desktop</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Prêt à transformer votre vision en réalité ?</h2>
+            <p>Contactez-nous dès aujourd'hui pour discuter de votre projet</p>
+            <a href="contact.html" class="btn btn-primary">Nous contacter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Wazur<span class="studio">Studio</span></h3>
+                    <p>Votre partenaire pour une présence web exceptionnelle</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="tarif.html">Tarif</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: wazurstudio.contact@gmail.com</p>
+                    <p>Tél: +33 x xx xx xx xx</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 WazurStudio. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</body>
+</html>

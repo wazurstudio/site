@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - WazurStudio</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>wazur<span class="studio">STUDIO</span></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" >Accueil</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="tarif.html">Tarif</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Contactez-Nous</h1>
+            <p>Donnons vie à vos idées ensemble</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Parlons de votre projet</h2>
+                    <p>Que vous ayez un projet en tête ou simplement des questions, notre équipe est là pour vous accompagner.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h3>Email</h3>
+                                <p>wazurstudio.contact@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <h3>Téléphone</h3>
+                                <p>+33 x xx xx xx xx</p>
+                            </div>
+                        </div>
+                            <!-- a mettre plus tard  -->
+<!--                         <div class="contact-item"> -->
+<!--                             <div class="contact-icon">📍</div> -->
+<!--                             <div> -->
+<!--                                 <h3>Adresse</h3> -->
+<!--                                 <p>123 Avenue des Champs-Élysées<br>75008 Paris, France</p> -->
+<!--                             </div> -->
+<!--                         </div> -->
+
+                        <div class="contact-item">
+                            <div class="contact-icon">⏰</div>
+                            <div>
+                                <h3>Horaires</h3>
+                                <p>Lundi - dimanche: Sur rendez-vous</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h3>Suivez-nous</h3>
+                        <div class="social-icons">
+                            <a href="https://www.tiktok.com/@wazur.studio" class="social-icon">TikTok</a>
+                            <a href="https://www.instagram.com/wazur_studio/" class="social-icon">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+<form action="https://formspree.io/f/mldonzvg" method="POST">
+                <div class="contact-form-wrapper">
+                        <h3 style="font-size: 35px;">Envoyez-nous un message</h3>
+<br>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Prénom *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName">Nom *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Type de projet *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Sélectionnez un service</option>
+                                <option value="site vitrine">Site Vitrine</option>
+                                <option value="site one page">Site One Page</option>
+                                <option value="landing page marketing">Landing Page Marketing</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Envoyer le message</button>
+
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+
+            </div>
+        </div>
+    </section>
+
+   <!-- <section class="map-section">
+        <div class="map-placeholder">
+            <div class="map-content">
+                <h3>Nos Bureaux</h3>
+                <p>Situés au cœur de Paris</p>
+            </div>
+        </div>
+    </section>-->
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>wazur<span class="studio">STUDIO</span></h3>
+                    <p>Votre partenaire pour une présence web exceptionnelle</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="tarif.html">Tarif</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                   <p>Email: wazurstudio.contact@gmail.com</p>
+                   <p>Tél: +33 x xx xx xx xx</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 WazurStudio. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Form Handling
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Simulation d'envoi
+            formMessage.innerHTML = '<div class="success-message">✓ Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.</div>';
+            formMessage.style.display = 'block';
+
+            // Reset form
+            contactForm.reset();
+
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
