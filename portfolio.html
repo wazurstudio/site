@@ -337,6 +337,30 @@
                 });
             });
         });
+        // --- OUVERTURE OVERLAY SUR MOBILE ---
+document.querySelectorAll('.portfolio-image').forEach(card => {
+    card.addEventListener('click', function (e) {
+        const overlay = this.querySelector('.portfolio-overlay');
+
+        // Si l’overlay est déjà ouvert → clique ferme
+        if (overlay.classList.contains('active')) {
+            overlay.classList.remove('active');
+        } else {
+            // Ferme toutes les autres overlays
+            document.querySelectorAll('.portfolio-overlay').forEach(o => o.classList.remove('active'));
+            // Ouvre celle-ci
+            overlay.classList.add('active');
+        }
+
+        e.stopPropagation();
+    });
+});
+
+// Ferme si on clique ailleurs
+document.addEventListener('click', () => {
+    document.querySelectorAll('.portfolio-overlay').forEach(o => o.classList.remove('active'));
+});
+
     </script>
 </body>
 </html>
