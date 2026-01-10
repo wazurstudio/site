@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - ÉlectroLux Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Élec</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Contactez-nous</h1>
+            <p class="page-subtitle">Nous sommes à votre écoute pour répondre à toutes vos questions</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Parlons de votre projet</h2>
+                    <p>N'hésitez pas à nous contacter pour un devis gratuit ou pour toute question. Notre équipe vous répondra dans les plus brefs délais.</p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h3>Téléphone</h3>
+                                <p><a href="tel:0123456789">06 xx xx xx xx</a></p>
+                                <span class="contact-sub">Du lundi au vendredi, 8h-18h</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h3>Email</h3>
+                                <p><a href="mailto:contact@electroluxpro.fr">contact@exemple.fr</a></p>
+                                <span class="contact-sub">Réponse sous 24h</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h3>Adresse</h3>
+                                <p>123 Avenue de l'Électricité<br>xxxxx Ville</p>
+                                <span class="contact-sub">Sur rendez-vous</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">⏰</div>
+                            <div>
+                                <h3>Urgences 24/7</h3>
+                                <p><a href="tel:0623456789">06 xx xx xx xx</a></p>
+                                <span class="contact-sub">Dépannages jour et nuit</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-certifications">
+                        <h3>Nos certifications</h3>
+                        <div class="cert-badges">
+                            <div class="cert-badge">RGE</div>
+                            <div class="cert-badge">Qualifelec</div>
+                            <div class="cert-badge">Garantie décennale</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nom">Nom *</label>
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="prenom">Prénom *</label>
+                                <input type="text" id="prenom" name="prenom" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone">Téléphone *</label>
+                                <input type="tel" id="telephone" name="telephone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Type de service</label>
+                            <select id="service" name="service">
+                                <option value="">Sélectionnez un service</option>
+                                <option value="residentiel">Installation résidentielle</option>
+                                <option value="tertiaire">Électricité tertiaire</option>
+                                <option value="depannage">Dépannage d'urgence</option>
+                                <option value="renovation">Rénovation électrique</option>
+                                <option value="renouvelable">Énergies renouvelables</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="adresse">Adresse du projet</label>
+                            <input type="text" id="adresse" name="adresse">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Décrivez votre projet ou votre demande..."></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="rgpd" name="rgpd" required>
+                            <label for="rgpd">J'accepte que mes données soient utilisées pour me recontacter concernant ma demande *</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Envoyer ma demande</button>
+
+                        <div class="form-message" id="formMessage"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-placeholder">
+            <div class="map-content">
+                <span class="map-icon">📍</span>
+                <p>Zone d'intervention : Paris et Île-de-France</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Questions fréquentes</span>
+                <h2 class="section-title">FAQ</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Quel est le délai pour obtenir un devis ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nous nous engageons à vous fournir un devis détaillé sous 24 à 48 heures après votre demande. Pour les urgences, nous pouvons établir un devis sur place immédiatement.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Intervenez-vous en urgence ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, nous disposons d'un service de dépannage d'urgence disponible 24h/24 et 7j/7. Appelez le 06 23 45 67 89 pour toute urgence électrique.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Êtes-vous certifiés et assurés ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolument. Nous possédons les certifications RGE et Qualifelec, ainsi qu'une garantie décennale. Toutes nos interventions sont couvertes par une assurance responsabilité civile professionnelle.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Quelle est votre zone d'intervention ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nous intervenons sur Paris et toute l'Île-de-France. Pour des projets importants, nous pouvons étendre notre zone d'intervention.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Puis-je bénéficier d'aides financières ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, grâce à notre certification RGE, vous pouvez bénéficier de différentes aides pour vos travaux de rénovation énergétique et d'installation d'énergies renouvelables (MaPrimeRénov', certificats d'économies d'énergie, etc.).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Quels moyens de paiement acceptez-vous ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nous acceptons les paiements par chèque, virement bancaire et carte bancaire. Des facilités de paiement peuvent être proposées pour les gros travaux.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">ÉlectroLux Pro</span>
+                    </div>
+                    <p class="footer-desc">Votre partenaire de confiance pour tous vos projets électriques depuis 2009.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#residentiel">Installation résidentielle</a></li>
+                        <li><a href="services.html#tertiaire">Électricité tertiaire</a></li>
+                        <li><a href="services.html#depannage">Dépannage</a></li>
+                        <li><a href="services.html#renovation">Rénovation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li>📞 06 xx xx xx xx</li>
+                        <li>✉️ contact@exemple.fr</li>
+                        <li>📍 123 Avenue de l'Électricité<br>xxxxx Ville</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Élec. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

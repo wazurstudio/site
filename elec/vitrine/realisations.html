@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Réalisations - ÉlectroLux Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Élec</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="realisations.html" class="nav-link active">Réalisations</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Nos Réalisations</h1>
+            <p class="page-subtitle">Découvrez quelques-uns de nos projets récents</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio">
+        <div class="container">
+            <div class="portfolio-grid">
+                <!-- Projet 1 -->
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">🏠</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="btn-view" onclick="openModal(0)">Voir les détails</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Résidentiel</span>
+                        <h3>Rénovation complète - Maison 150m²</h3>
+                        <p>Ville - mois 2026</p>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">🏢</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="btn-view" onclick="openModal(1)">Voir les détails</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Tertiaire</span>
+                        <h3>Installation boutique de mode</h3>
+                        <p>Ville - mois 2026</p>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">♻️</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="btn-view" onclick="openModal(2)">Voir les détails</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Énergies renouvelables</span>
+                        <h3>Panneaux solaires 6kWc</h3>
+                        <p>Ville - mois 2026</p>
+                    </div>
+                </div>
+
+                <!-- Projet 4 -->
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">🏠</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="btn-view" onclick="openModal(3)">Voir les détails</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Résidentiel</span>
+                        <h3>Domotique appartement 80m²</h3>
+                        <p>Ville - mois 2026</p>
+                    </div>
+                </div>
+
+                <!-- Projet 5 -->
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">🍽️</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="btn-view" onclick="openModal(4)">Voir les détails</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Tertiaire</span>
+                        <h3>Restaurant gastronomique</h3>
+                        <p>Ville - mois 2026</p>
+                    </div>
+                </div>
+
+                <!-- Projet 6 -->
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">🔌</span>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="btn-view" onclick="openModal(5)">Voir les détails</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Énergies renouvelables</span>
+                        <h3>Borne de recharge véhicule électrique</h3>
+                        <p>Ville - mois 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="portfolioModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Le contenu sera inséré dynamiquement -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Témoignages</span>
+                <h2 class="section-title">Ce que disent nos clients</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Intervention rapide et professionnelle pour notre rénovation complète. L'équipe est très compétente et à l'écoute. Je recommande vivement !"</p>
+                    <div class="testimonial-author">
+                        <strong>Nom</strong>
+                        <span>Ville</span>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Excellent travail sur l'installation électrique de notre boutique. Respect des délais et des normes. Très satisfait du résultat !"</p>
+                    <div class="testimonial-author">
+                        <strong>Nom</strong>
+                        <span>Ville</span>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Installation de panneaux solaires impeccable. L'équipe nous a bien conseillés et accompagnés pour obtenir les aides. Très professionnel !"</p>
+                    <div class="testimonial-author">
+                        <strong>Nom</strong>
+                        <span>Ville</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Vous avez un projet similaire ?</h2>
+                <p>Parlons-en et créons ensemble votre solution sur-mesure</p>
+                <a href="contact.html" class="btn btn-primary btn-large">Demander un devis</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">ÉlectroLux Pro</span>
+                    </div>
+                    <p class="footer-desc">Votre partenaire de confiance pour tous vos projets électriques depuis 2009.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#residentiel">Installation résidentielle</a></li>
+                        <li><a href="services.html#tertiaire">Électricité tertiaire</a></li>
+                        <li><a href="services.html#depannage">Dépannage</a></li>
+                        <li><a href="services.html#renovation">Rénovation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li>📞 06 xx xx xx xx</li>
+                        <li>✉️ contact@exemple.fr</li>
+                        <li>📍 123 Avenue de l'Électricité<br>xxxxx Ville</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Élec. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/portfolio.js"></script>
+</body>
+</html>
