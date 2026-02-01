@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Biens - Prestige Immobilier</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">Prestige Immobilier</a>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="biens.html" class="active">Nos Biens</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Nos Biens d'Exception</h1>
+            <p class="page-subtitle">Découvrez notre sélection exclusive de propriétés de prestige</p>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-wrapper">
+                <div class="filter-group">
+                    <label for="propertyType">Type de bien</label>
+                    <select id="propertyType" class="filter-select">
+                        <option value="all">Tous</option>
+                        <option value="villa">Villa</option>
+                        <option value="appartement">Appartement</option>
+                        <option value="penthouse">Penthouse</option>
+                        <option value="maison">Maison</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="location">Localisation</label>
+                    <select id="location" class="filter-select">
+                        <option value="all">Toutes</option>
+                        <option value="cannes">Cannes</option>
+                        <option value="nice">Nice</option>
+                        <option value="monaco">Monaco</option>
+                        <option value="antibes">Antibes</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="priceRange">Budget</label>
+                    <select id="priceRange" class="filter-select">
+                        <option value="all">Tous budgets</option>
+                        <option value="low">Moins de 500k €</option>
+                        <option value="mid">500k - 1M €</option>
+                        <option value="high">Plus de 1M €</option>
+                    </select>
+                </div>
+
+                <button class="filter-button">Rechercher</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Listing -->
+    <section class="properties-listing">
+        <div class="container">
+            <div class="properties-grid">
+                <!-- Property 1 -->
+                <article class="property-card" data-aos="fade-up">
+                    <div class="property-image">
+                        <div class="property-badge">Nouveau</div>
+                        <div class="property-img-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                        <button class="favorite-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">850 000 €</div>
+                        <h3 class="property-title">Villa Contemporaine</h3>
+                        <p class="property-location">Cannes, Alpes-Maritimes</p>
+                        <div class="property-features">
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg> 250 m²</span>
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/></svg> 5 pièces</span>
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg> 4 chambres</span>
+                        </div>
+                        <button class="property-cta">Voir les détails</button>
+                    </div>
+                </article>
+
+                <!-- Property 2 -->
+                <article class="property-card" data-aos="fade-up" data-aos-delay="50">
+                    <div class="property-image">
+                        <div class="property-badge exclusive">Exclusivité</div>
+                        <div class="property-img-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                        <button class="favorite-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">1 250 000 €</div>
+                        <h3 class="property-title">Penthouse Vue Mer</h3>
+                        <p class="property-location">Nice, Promenade des Anglais</p>
+                        <div class="property-features">
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg> 180 m²</span>
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/></svg> 4 pièces</span>
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg> 3 chambres</span>
+                        </div>
+                        <button class="property-cta">Voir les détails</button>
+                    </div>
+                </article>
+
+                <!-- Property 3 -->
+                <article class="property-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="property-image">
+                        <div class="property-img-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                        <button class="favorite-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">620 000 €</div>
+                        <h3 class="property-title">Appartement Haussmannien</h3>
+                        <p class="property-location">Monaco, Monte-Carlo</p>
+                        <div class="property-features">
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg> 145 m²</span>
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/></svg> 4 pièces</span>
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg> 3 chambres</span>
+                        </div>
+                        <button class="property-cta">Voir les détails</button>
+                    </div>
+                </article>
+
+                <!-- Property 4 -->
+                <article class="property-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="property-image">
+                        <div class="property-img-placeholder" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+                        <button class="favorite-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">435 000 €</div>
+                        <h3 class="property-title">Appartement Moderne</h3>
+                        <p class="property-location">Antibes, Juan-les-Pins</p>
+                        <div class="property-features">
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg> 95 m²</span>
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/></svg> 3 pièces</span>
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg> 2 chambres</span>
+                        </div>
+                        <button class="property-cta">Voir les détails</button>
+                    </div>
+                </article>
+
+                <!-- Property 5 -->
+                <article class="property-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="property-image">
+                        <div class="property-badge">Nouveau</div>
+                        <div class="property-img-placeholder" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"></div>
+                        <button class="favorite-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">1 890 000 €</div>
+                        <h3 class="property-title">Villa Belle Époque</h3>
+                        <p class="property-location">Cannes, Californie</p>
+                        <div class="property-features">
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg> 320 m²</span>
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/></svg> 7 pièces</span>
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg> 5 chambres</span>
+                        </div>
+                        <button class="property-cta">Voir les détails</button>
+                    </div>
+                </article>
+
+                <!-- Property 6 -->
+                <article class="property-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="property-image">
+                        <div class="property-img-placeholder" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);"></div>
+                        <button class="favorite-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">780 000 €</div>
+                        <h3 class="property-title">Duplex de Charme</h3>
+                        <p class="property-location">Nice, Cimiez</p>
+                        <div class="property-features">
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg> 165 m²</span>
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/></svg> 5 pièces</span>
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg> 3 chambres</span>
+                        </div>
+                        <button class="property-cta">Voir les détails</button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">4</button>
+                <button class="pagination-btn">Suivant</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Vous ne trouvez pas ce que vous cherchez ?</h2>
+                <p class="cta-text">Contactez-nous et nous vous aiderons à trouver le bien idéal</p>
+                <a href="contact.html" class="cta-button">Contactez-nous</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="footer-title">Prestige Immobilier</h3>
+                    <p class="footer-text">Votre partenaire de confiance pour tous vos projets immobiliers sur la Côte d'Azur.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="biens.html">Nos Biens</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">Contact</h4>
+                    <ul class="footer-links">
+                        <li>12 Avenue de la République</li>
+                        <li>06400 Cannes, France</li>
+                        <li>+33 4 93 38 50 00</li>
+                        <li>contact@prestige-immo.fr</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Prestige Immobilier. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestige Immobilier - Votre partenaire en immobilier de luxe</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">◆</span>
+                <span class="logo-text">PRESTIGE</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#proprietes" class="nav-link">Propriétés</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">À Propos</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">
+                    <span class="hero-subtitle">Découvrez l'excellence</span>
+                    Votre rêve immobilier commence ici
+                </h1>
+                <p class="hero-description">Des propriétés d'exception pour une vie extraordinaire</p>
+                <div class="hero-buttons">
+                    <a href="#proprietes" class="btn btn-primary">Explorer nos biens</a>
+                    <a href="#contact" class="btn btn-secondary">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Découvrir</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section id="proprietes" class="properties">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Nos Exclusivités</span>
+                <h2 class="section-title">Propriétés d'Exception</h2>
+                <p class="section-description">Une sélection rigoureuse des plus beaux biens immobiliers</p>
+            </div>
+
+            <div class="properties-grid" id="propertiesGrid">
+                <!-- Properties will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Notre Expertise</span>
+                <h2 class="section-title">Services Premium</h2>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3 class="service-title">Achat & Vente</h3>
+                    <p class="service-description">Accompagnement personnalisé pour concrétiser vos projets immobiliers avec expertise et discrétion.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3 class="service-title">Estimation</h3>
+                    <p class="service-description">Évaluation précise de votre bien basée sur une analyse approfondie du marché immobilier.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔑</div>
+                    <h3 class="service-title">Gestion Locative</h3>
+                    <p class="service-description">Service complet de gestion de vos biens locatifs avec suivi administratif et technique.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💼</div>
+                    <h3 class="service-title">Conseil Patrimonial</h3>
+                    <p class="service-description">Stratégies d'investissement sur mesure pour optimiser votre patrimoine immobilier.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-label">Notre Histoire</span>
+                    <h2 class="section-title">Une Passion, Une Excellence</h2>
+                    <p>Depuis plus de 25 ans, Prestige Immobilier s'impose comme la référence de l'immobilier haut de gamme. Notre expertise reconnue et notre réseau exclusif nous permettent de proposer des propriétés d'exception.</p>
+                    <p>Notre équipe de professionnels passionnés vous accompagne à chaque étape de votre projet, avec discrétion et excellence.</p>
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="500">0</span>
+                            <span class="stat-label">Biens Vendus</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="98">0</span>
+                            <span class="stat-label">% Satisfaction</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="25">0</span>
+                            <span class="stat-label">Ans d'Expertise</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <div class="image-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <span class="section-label">Contactez-nous</span>
+                    <h2 class="section-title">Parlons de Votre Projet</h2>
+                    <p>Notre équipe est à votre disposition pour répondre à toutes vos questions et vous accompagner dans votre recherche.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <h4>Adresse</h4>
+                                <p>123 Avenue des Champs-Élysées<br>75008 Paris, France</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <p>+33 1 23 45 67 89</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contact@prestige-immobilier.fr</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Votre nom" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Votre email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Votre téléphone">
+                    </div>
+
+                    <div class="form-group">
+                        <select id="subject" required>
+                            <option value="">Type de demande</option>
+                            <option value="achat">Achat</option>
+                            <option value="vente">Vente</option>
+                            <option value="location">Location</option>
+                            <option value="estimation">Estimation</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Votre message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="logo-icon">◆</span>
+                        <span class="logo-text">PRESTIGE</span>
+                    </div>
+                    <p>L'excellence immobilière depuis 1998</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#proprietes">Propriétés</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">À Propos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>123 Avenue des Champs-Élysées</li>
+                        <li>75008 Paris, France</li>
+                        <li>+33 1 23 45 67 89</li>
+                        <li>contact@prestige-immobilier.fr</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Prestige Immobilier. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
