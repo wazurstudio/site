@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeDrive - Location de Voitures de Luxe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Formes animées en arrière-plan -->
+    <div class="animated-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">LuxeDrive</div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="btn-primary">Réserver</button>
+        </div>
+    </nav>
+
+    <!-- Section Hero -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="line">L'Excellence</span>
+                    <span class="line">en Mouvement</span>
+                </h1>
+                <p class="hero-subtitle">Découvrez notre collection exclusive de voitures de prestige</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary btn-large">Explorer la Collection</button>
+                    <button class="btn-secondary btn-large">Nous Contacter</button>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Défiler</span>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Collection -->
+    <section id="collection" class="collection">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Notre Flotte</span>
+                <h2 class="section-title">Collection Exclusive</h2>
+            </div>
+            <div class="cars-grid">
+                <div class="car-card">
+                    <div class="car-image">
+                        <div class="car-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <span class="car-icon">🏎️</span>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">Lamborghini Huracán</h3>
+                        <p class="car-desc">Supercar italienne, 610 ch, 0-100 en 2.9s</p>
+                        <div class="car-details">
+                            <span class="car-price">1 200€<small>/jour</small></span>
+                            <button class="btn-reserve">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <div class="car-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <span class="car-icon">🚗</span>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">Rolls-Royce Phantom</h3>
+                        <p class="car-desc">Le summum du luxe et du raffinement</p>
+                        <div class="car-details">
+                            <span class="car-price">2 500€<small>/jour</small></span>
+                            <button class="btn-reserve">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <div class="car-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <span class="car-icon">🏁</span>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">Porsche 911 Turbo S</h3>
+                        <p class="car-desc">Sportive iconique, 650 ch, excellence allemande</p>
+                        <div class="car-details">
+                            <span class="car-price">950€<small>/jour</small></span>
+                            <button class="btn-reserve">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <div class="car-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                            <span class="car-icon">🔥</span>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">Ferrari F8 Tributo</h3>
+                        <p class="car-desc">Légende italienne, 720 ch, pure émotion</p>
+                        <div class="car-details">
+                            <span class="car-price">1 500€<small>/jour</small></span>
+                            <button class="btn-reserve">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <div class="car-placeholder" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                            <span class="car-icon">⚡</span>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">Mercedes AMG GT</h3>
+                        <p class="car-desc">Grand tourisme sportif, élégance et puissance</p>
+                        <div class="car-details">
+                            <span class="car-price">850€<small>/jour</small></span>
+                            <button class="btn-reserve">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <div class="car-placeholder" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                            <span class="car-icon">💎</span>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">Bentley Continental GT</h3>
+                        <p class="car-desc">Luxe britannique, confort et performance</p>
+                        <div class="car-details">
+                            <span class="car-price">1 100€<small>/jour</small></span>
+                            <button class="btn-reserve">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Nos Avantages</span>
+                <h2 class="section-title">Services Premium</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚘</div>
+                    <h3>Livraison à Domicile</h3>
+                    <p>Votre voiture livrée où vous voulez, quand vous voulez</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Assurance Premium</h3>
+                    <p>Protection complète incluse pour votre tranquillité</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Maintenance Impeccable</h3>
+                    <p>Véhicules entretenus par des experts certifiés</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⏰</div>
+                    <h3>Support 24/7</h3>
+                    <p>Une équipe dédiée à votre service à tout moment</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌟</div>
+                    <h3>Expérience VIP</h3>
+                    <p>Traitement personnalisé et concierge privé</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💳</div>
+                    <h3>Paiement Flexible</h3>
+                    <p>Options de paiement adaptées à vos besoins</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Prêt à Vivre l'Excellence ?</h2>
+                    <p>Contactez-nous dès maintenant pour réserver votre véhicule d'exception</p>
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <span class="detail-icon">📞</span>
+                            <div>
+                                <strong>Téléphone</strong>
+                                <p>+33 1 23 45 67 89</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">✉️</span>
+                            <div>
+                                <strong>Email</strong>
+                                <p>contact@luxedrive.fr</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">📍</span>
+                            <div>
+                                <strong>Adresse</strong>
+                                <p>123 Avenue des Champs-Élysées, Paris</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Votre téléphone" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Choisir un véhicule</option>
+                            <option value="lamborghini">Lamborghini Huracán</option>
+                            <option value="rolls">Rolls-Royce Phantom</option>
+                            <option value="porsche">Porsche 911 Turbo S</option>
+                            <option value="ferrari">Ferrari F8 Tributo</option>
+                            <option value="mercedes">Mercedes AMG GT</option>
+                            <option value="bentley">Bentley Continental GT</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Votre message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">Envoyer la Demande</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="logo">LuxeDrive</h3>
+                    <p>L'excellence automobile à votre service depuis 2010</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#collection">Collection</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Conditions générales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LuxeDrive. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

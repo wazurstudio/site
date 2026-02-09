@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestige Auto - Location de Voitures de Luxe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">◆</span>
+                <span class="logo-text">PRESTIGE AUTO</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#contact" class="btn-nav">Réserver</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="animated-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-tag fade-in">L'Excellence en Mouvement</div>
+            <h1 class="hero-title">
+                <span class="title-line slide-up">Conduisez</span>
+                <span class="title-line slide-up delay-1">Vos Rêves</span>
+            </h1>
+            <p class="hero-subtitle fade-in delay-2">
+                Découvrez notre collection exclusive de véhicules d'exception
+            </p>
+            <div class="hero-cta fade-in delay-3">
+                <a href="#collection" class="btn btn-primary">
+                    Explorer la Collection
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    Contactez-nous
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-label">Véhicules Premium</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="98">0</div>
+                    <div class="stat-label">% Satisfaction Client</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">Années d'Excellence</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="24">0</div>
+                    <div class="stat-label">Service 24/7</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" id="collection">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Notre Flotte</span>
+                <h2 class="section-title">Collection Exclusive</h2>
+                <p class="section-subtitle">
+                    Chaque véhicule est soigneusement sélectionné pour offrir une expérience de conduite inoubliable
+                </p>
+            </div>
+
+            <div class="collection-grid">
+                <div class="car-card" data-category="sport">
+                    <div class="car-image">
+                        <div class="car-image-placeholder" style="background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);">
+                            <span class="car-placeholder-text">Ferrari 488 GTB</span>
+                        </div>
+                        <div class="car-badge">Nouveau</div>
+                    </div>
+                    <div class="car-info">
+                        <div class="car-header">
+                            <h3 class="car-name">Ferrari 488 GTB</h3>
+                            <div class="car-category">Sport</div>
+                        </div>
+                        <div class="car-specs">
+                            <span class="spec">670 CV</span>
+                            <span class="spec-divider">•</span>
+                            <span class="spec">330 km/h</span>
+                            <span class="spec-divider">•</span>
+                            <span class="spec">V8</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-label">À partir de</span>
+                                <span class="price-amount">1 200€<span class="price-period">/jour</span></span>
+                            </div>
+                            <button class="btn-reserve">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="luxury">
+                    <div class="car-image">
+                        <div class="car-image-placeholder" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);">
+                            <span class="car-placeholder-text">Rolls-Royce Phantom</span>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <div class="car-header">
+                            <h3 class="car-name">Rolls-Royce Phantom</h3>
+                            <div class="car-category">Prestige</div>
+                        </div>
+                        <div class="car-specs">
+                            <span class="spec">563 CV</span>
+                            <span class="spec-divider">•</span>
+                            <span class="spec">Chauffeur</span>
+                            <span class="spec-divider">•</span>
+                            <span class="spec">V12</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-label">À partir de</span>
+                                <span class="price-amount">2 500€<span class="price-period">/jour</span></span>
+                            </div>
+                            <button class="btn-reserve">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="sport">
+                    <div class="car-image">
+                        <div class="car-image-placeholder" style="background: linear-gradient(135deg, #8B0000 0%, #DC143C 100%);">
+                            <span class="car-placeholder-text">Lamborghini Huracán</span>
+                        </div>
+                        <div class="car-badge">Populaire</div>
+                    </div>
+                    <div class="car-info">
+                        <div class="car-header">
+                            <h3 class="car-name">Lamborghini Huracán</h3>
+                            <div class="car-category">Sport</div>
+                        </div>
+                        <div class="car-specs">
+                            <span class="spec">640 CV</span>
+                            <span class="spec-divider">•</span>
+                            <span class="spec">325 km/h</span>
+                            <span class="spec-divider">•</span>
+                            <span class="spec">V10</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-label">À partir de</span>
+                                <span class="price-amount">1 500€<span class="price-period">/jour</span></span>
+                            </div>
+                            <button class="btn-reserve">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="suv">
+                    <div class="car-image">
+                        <div class="car-image-placeholder" style="background: linear-gradient(135deg, #1c1c1c 0%, #3a3a3a 100%);">
+                            <span class="car-placeholder-text">Bentley Bentayga</span>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <div class="car-header">
+                            <h3 class="car-name">Bentley Bentayga</h3>
+                            <div class="car-category">SUV Luxe</div>
+                        </div>
+                        <div class="car-specs">
+                            <span class="spec">550 CV</span>
+                            <span class="spec-divider">•</span>
+                            <span class="spec">7 places</span>
+                            <span class="spec-divider">•</span>
+                            <span class="spec">V8</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-label">À partir de</span>
+                                <span class="price-amount">1 800€<span class="price-period">/jour</span></span>
+                            </div>
+                            <button class="btn-reserve">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="luxury">
+                    <div class="car-image">
+                        <div class="car-image-placeholder" style="background: linear-gradient(135deg, #0f0f0f 0%, #2a2a2a 100%);">
+                            <span class="car-placeholder-text">Mercedes Maybach</span>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <div class="car-header">
+                            <h3 class="car-name">Mercedes Maybach S-Class</h3>
+                            <div class="car-category">Prestige</div>
+                        </div>
+                        <div class="car-specs">
+                            <span class="spec">503 CV</span>
+                            <span class="spec-divider">•</span>
+                            <span class="spec">Confort Max</span>
+                            <span class="spec-divider">•</span>
+                            <span class="spec">V8</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-label">À partir de</span>
+                                <span class="price-amount">1 300€<span class="price-period">/jour</span></span>
+                            </div>
+                            <button class="btn-reserve">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="sport">
+                    <div class="car-image">
+                        <div class="car-image-placeholder" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);">
+                            <span class="car-placeholder-text">Porsche 911 Turbo S</span>
+                        </div>
+                        <div class="car-badge">Exclusif</div>
+                    </div>
+                    <div class="car-info">
+                        <div class="car-header">
+                            <h3 class="car-name">Porsche 911 Turbo S</h3>
+                            <div class="car-category">Sport</div>
+                        </div>
+                        <div class="car-specs">
+                            <span class="spec">650 CV</span>
+                            <span class="spec-divider">•</span>
+                            <span class="spec">330 km/h</span>
+                            <span class="spec-divider">•</span>
+                            <span class="spec">Flat-6</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-label">À partir de</span>
+                                <span class="price-amount">1 100€<span class="price-period">/jour</span></span>
+                            </div>
+                            <button class="btn-reserve">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Services Premium</span>
+                <h2 class="section-title">Une Expérience Sur Mesure</h2>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚗</div>
+                    <h3 class="service-title">Livraison Premium</h3>
+                    <p class="service-description">
+                        Nous livrons votre véhicule où vous le souhaitez, à l'aéroport, l'hôtel ou votre domicile
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">👔</div>
+                    <h3 class="service-title">Chauffeur Privé</h3>
+                    <p class="service-description">
+                        Profitez d'un chauffeur professionnel et discret pour vos déplacements
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3 class="service-title">Assurance Premium</h3>
+                    <p class="service-description">
+                        Roulez en toute sérénité avec notre couverture complète tous risques
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3 class="service-title">Maintenance 24/7</h3>
+                    <p class="service-description">
+                        Assistance technique disponible à tout moment pendant votre location
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3 class="service-title">Conciergerie</h3>
+                    <p class="service-description">
+                        Notre équipe organise vos itinéraires et réservations pour une expérience parfaite
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3 class="service-title">Personnalisation</h3>
+                    <p class="service-description">
+                        Adaptez chaque détail de votre location selon vos préférences
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="experience-background">
+            <div class="experience-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="experience-content">
+                <div class="experience-text">
+                    <span class="section-tag light">L'Art du Raffinement</span>
+                    <h2 class="section-title light">Plus Qu'une Location,<br>Une Expérience</h2>
+                    <p class="experience-description">
+                        Depuis plus de 15 ans, Prestige Auto redéfinit les standards de la location de véhicules de luxe. Chaque détail est pensé pour vous offrir une expérience exceptionnelle, du premier contact jusqu'à la restitution du véhicule.
+                    </p>
+                    <div class="experience-features">
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Véhicules entretenus quotidiennement</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Flexibilité totale sur les réservations</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span>Service client dédié et personnalisé</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-light">
+                        Commencer l'Expérience
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Témoignages</span>
+                <h2 class="section-title">Ce Que Disent Nos Clients</h2>
+            </div>
+
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Une expérience absolument exceptionnelle. La Ferrari 488 était impeccable et le service client irréprochable. Je recommande sans hésitation."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Marc Dubois</div>
+                            <div class="author-role">Chef d'Entreprise</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Le service de conciergerie a transformé notre weekend en expérience inoubliable. Professionnalisme et attention aux détails au rendez-vous."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Sophie Laurent</div>
+                            <div class="author-role">Architecte</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "J'ai loué la Rolls-Royce pour mon mariage. Le chauffeur était parfait et la voiture sublime. Prestige Auto a dépassé toutes mes attentes."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Alexandre Martin</div>
+                            <div class="author-role">Consultant</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">Contact</span>
+                    <h2 class="section-title">Réservez Votre<br>Véhicule d'Exception</h2>
+                    <p class="contact-description">
+                        Notre équipe est à votre disposition pour créer une expérience sur mesure
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📞</div>
+                            <div class="contact-item-content">
+                                <div class="contact-item-label">Téléphone</div>
+                                <div class="contact-item-value">+33 1 23 45 67 89</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">✉️</div>
+                            <div class="contact-item-content">
+                                <div class="contact-item-label">Email</div>
+                                <div class="contact-item-value">contact@prestige-auto.fr</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div class="contact-item-content">
+                                <div class="contact-item-label">Showroom</div>
+                                <div class="contact-item-value">15 Avenue des Champs-Élysées, Paris</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Nom Complet</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" id="phone" required>
+                        <label for="phone">Téléphone</label>
+                    </div>
+
+                    <div class="form-group">
+                        <select id="vehicle" required>
+                            <option value="" disabled selected></option>
+                            <option value="ferrari">Ferrari 488 GTB</option>
+                            <option value="rolls">Rolls-Royce Phantom</option>
+                            <option value="lambo">Lamborghini Huracán</option>
+                            <option value="bentley">Bentley Bentayga</option>
+                            <option value="maybach">Mercedes Maybach</option>
+                            <option value="porsche">Porsche 911 Turbo S</option>
+                        </select>
+                        <label for="vehicle">Véhicule Souhaité</label>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <textarea id="message" rows="4" required></textarea>
+                        <label for="message">Votre Message</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full-width">
+                        Envoyer la Demande
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">◆</span>
+                        <span class="logo-text">PRESTIGE AUTO</span>
+                    </div>
+                    <p class="footer-description">
+                        L'excellence en mouvement depuis 2010
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#collection">Collection</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#experience">Expérience</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Légal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Mentions Légales</a></li>
+                        <li><a href="#">CGV</a></li>
+                        <li><a href="#">Confidentialité</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Prestige Auto. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
