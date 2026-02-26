@@ -3,18 +3,50 @@
 // ============================================
 window.addEventListener('load', () => {
   const loader = document.querySelector('.page-loader');
-  setTimeout(() => {
-    loader.classList.add('hidden');
-  }, 1500);
+  if (loader) {
+    setTimeout(() => {
+      loader.classList.add('hidden');
+    }, 1500);
+  }
 });
 
 // ============================================
-// Smooth Scrolling
+// Hamburger Menu Toggle
+// ============================================
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+if (hamburger && navMenu) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+
+  // Fermer le menu quand on clique sur un lien (mobile)
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+
+  // Fermer le menu si on clique en dehors (optionnel mais utile)
+  document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    }
+  });
+}
+
+// ============================================
+// Smooth Scrolling pour les ancres internes
 // ============================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const targetId = this.getAttribute('href');
+    const target = document.querySelector(targetId);
     if (target) {
       target.scrollIntoView({
         behavior: 'smooth',
@@ -25,51 +57,57 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ============================================
-// Navigation Scroll Effect
+// Navigation Scroll Effect (fond plus opaque au scroll)
 // ============================================
 let lastScroll = 0;
 const nav = document.querySelector('nav');
 
-window.addEventListener('scroll', () => {
-  const currentScroll = window.pageYOffset;
-  
-  if (currentScroll > 100) {
-    nav.classList.add('scrolled');
-  } else {
-    nav.classList.remove('scrolled');
-  }
-  
-  lastScroll = currentScroll;
-});
+if (nav) {
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > 100) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+
+    lastScroll = currentScroll;
+  });
+}
 
 // ============================================
-// Animated Shapes Follow Mouse
+// Animated Shapes Follow Mouse (désactivé sur mobile pour perf)
 // ============================================
-document.addEventListener('mousemove', (e) => {
-  const shapes = document.querySelectorAll('.shape-element');
-  const mouseX = e.clientX / window.innerWidth;
-  const mouseY = e.clientY / window.innerHeight;
-  
-  shapes.forEach((shape, index) => {
-    const speed = (index + 1) * 15;
-    const x = (mouseX - 0.5) * speed;
-    const y = (mouseY - 0.5) * speed;
-    
-    shape.style.transform = `translate(${x}px, ${y}px) rotate(${x}deg)`;
+if (window.innerWidth > 768) {
+  document.addEventListener('mousemove', (e) => {
+    const shapes = document.querySelectorAll('.shape-element');
+    if (shapes.length === 0) return;
+
+    const mouseX = e.clientX / window.innerWidth;
+    const mouseY = e.clientY / window.innerHeight;
+
+    shapes.forEach((shape, index) => {
+      const speed = (index + 1) * 15;
+      const x = (mouseX - 0.5) * speed;
+      const y = (mouseY - 0.5) * speed;
+
+      shape.style.transform = `translate(${x}px, ${y}px) rotate(${x}deg)`;
+    });
   });
-});
+}
 
 // ============================================
 // Scroll Reveal Animation
 // ============================================
 const revealElements = () => {
   const reveals = document.querySelectorAll('.reveal');
-  
+
   reveals.forEach(element => {
     const windowHeight = window.innerHeight;
     const elementTop = element.getBoundingClientRect().top;
-    const elementVisible = 150;
-    
+    const elementVisible = 120; // déclenchement un peu plus tôt
+
     if (elementTop < windowHeight - elementVisible) {
       element.classList.add('active');
     }
@@ -77,53 +115,95 @@ const revealElements = () => {
 };
 
 window.addEventListener('scroll', revealElements);
-revealElements(); // Initial check
+window.addEventListener('resize', revealElements);
+revealElements(); // Vérification initiale
+
+// Débouncing pour éviter trop d'appels lors du scroll rapide
+const debouncedReveal = () => {
+  let timeout;
+  return () => {
+    clearTimeout(timeout);
+    timeout = setTimeout(revealElements, 50);
+  };
+};
+window.addEventListener('scroll', debouncedReveal());
 
 // ============================================
-// Parallax Effect
+// Parallax Effect sur hero-visual (désactivé sur mobile)
 // ============================================
-window.addEventListener('scroll', () => {
-  const scrolled = window.pageYOffset;
-  const parallaxElements = document.querySelectorAll('.hero-visual');
-  
-  parallaxElements.forEach(element => {
-    const speed = 0.3;
-    element.style.transform = `translateY(${scrolled * speed}px)`;
+if (window.innerWidth > 768) {
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.hero-visual');
+
+    parallaxElements.forEach(element => {
+      const speed = 0.25; // plus doux
+      element.style.transform = `translateY(${scrolled * speed}px)`;
+    });
   });
-});
+}
 
 // ============================================
-// Form Validation & Submission
+// Galerie photo (slider) – index.html
+// ============================================
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slider img');
+
+if (slider && slides.length > 0) {
+  let index = 0;
+  const intervalTime = 4500; // 4.5 secondes
+
+  function slideNext() {
+    index = (index + 1) % slides.length;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  let autoSlide = setInterval(slideNext, intervalTime);
+
+  // Pause au survol (optionnel mais améliore l'UX)
+  slider.addEventListener('mouseenter', () => {
+    clearInterval(autoSlide);
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    autoSlide = setInterval(slideNext, intervalTime);
+  });
+}
+
+// ============================================
+// Form Validation & Submission (page contact)
 // ============================================
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const message = document.getElementById('message').value.trim();
-    
-    // Simple validation
+
+    const name = document.getElementById('name')?.value.trim();
+    const email = document.getElementById('email')?.value.trim();
+    const phone = document.getElementById('phone')?.value.trim();
+    const message = document.getElementById('message')?.value.trim();
+
     if (!name || !email || !message) {
       showNotification('Veuillez remplir tous les champs obligatoires.', 'error');
       return;
     }
-    
+
     if (!validateEmail(email)) {
       showNotification('Veuillez entrer une adresse email valide.', 'error');
       return;
     }
-    
-    // Simulate form submission
-    showNotification(`Merci ${name} ! Votre message a été envoyé avec succès. Nous vous contacterons à ${email} dans les plus brefs délais.`, 'success');
+
+    // Simulation d'envoi
+    showNotification(
+      `Merci ${name} ! Votre message a été envoyé. Nous vous répondrons rapidement.`,
+      'success'
+    );
+
     contactForm.reset();
   });
 }
 
-// Email validation helper
 function validateEmail(email) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(email);
@@ -134,383 +214,53 @@ function validateEmail(email) {
 // ============================================
 function showNotification(message, type = 'success') {
   const notification = document.createElement('div');
-  notification.className = `notification notification-${type}`;
-  notification.innerHTML = `
-    <div style="
-      position: fixed;
-      top: 100px;
-      right: 30px;
-      background: ${type === 'success' ? 'linear-gradient(135deg, #D4AF37 0%, #F4E4C1 100%)' : 'linear-gradient(135deg, #dc2626 0%, #ef4444 100%)'};
-      color: #0A0A0A;
-      padding: 1.5rem 2rem;
-      border-radius: 5px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-      z-index: 10001;
-      animation: slideInRight 0.5s ease-out;
-      max-width: 400px;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-    ">
-      ${message}
-    </div>
-  `;
-  
+  notification.className = `notification ${type}`;
+  notification.textContent = message;
+
   document.body.appendChild(notification);
-  
+
+  // Style minimal (à compléter dans le CSS si besoin)
+  Object.assign(notification.style, {
+    position: 'fixed',
+    bottom: '20px',
+    right: '20px',
+    padding: '16px 24px',
+    backgroundColor: type === 'success' ? 'rgba(40, 167, 69, 0.9)' : 'rgba(220, 53, 69, 0.9)',
+                color: 'white',
+                borderRadius: '8px',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+                zIndex: '9999',
+                maxWidth: '380px',
+                opacity: '0',
+                transition: 'opacity 0.4s ease, transform 0.4s ease',
+                transform: 'translateY(20px)'
+  });
+
+  // Apparition
   setTimeout(() => {
-    notification.style.animation = 'slideOutRight 0.5s ease-out';
-    setTimeout(() => {
-      document.body.removeChild(notification);
-    }, 500);
+    notification.style.opacity = '1';
+    notification.style.transform = 'translateY(0)';
+  }, 100);
+
+  // Disparition
+  setTimeout(() => {
+    notification.style.opacity = '0';
+    notification.style.transform = 'translateY(20px)';
+    setTimeout(() => notification.remove(), 500);
   }, 5000);
 }
 
-// Add keyframes for notifications
-const style = document.createElement('style');
-style.textContent = `
-  @keyframes slideInRight {
-    from {
-      transform: translateX(400px);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slideOutRight {
-    from {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    to {
-      transform: translateX(400px);
-      opacity: 0;
-    }
-  }
-`;
-document.head.appendChild(style);
-
 // ============================================
-// Car Card Tilt Effect
+// Initialisation générale
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.car-card');
-  
-  cards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      
-      const rotateX = (y - centerY) / 20;
-      const rotateY = (centerX - x) / 20;
-      
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-15px)`;
-    });
-    
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = '';
-    });
-  });
-});
-
-// ============================================
-// Dynamic Shape Generation
-// ============================================
-function createFloatingShapes() {
-  const canvas = document.querySelector('.shapes-canvas');
-  if (!canvas) return;
-  
-  const colors = ['rgba(212, 175, 55, 0.05)', 'rgba(192, 192, 192, 0.03)'];
-  const shapes = ['circle', 'square', 'triangle'];
-  
-  for (let i = 0; i < 5; i++) {
-    const shape = document.createElement('div');
-    shape.className = 'floating-particle';
-    shape.style.cssText = `
-      position: absolute;
-      width: ${Math.random() * 100 + 50}px;
-      height: ${Math.random() * 100 + 50}px;
-      background: ${colors[Math.floor(Math.random() * colors.length)]};
-      border-radius: ${Math.random() > 0.5 ? '50%' : '0'};
-      top: ${Math.random() * 100}%;
-      left: ${Math.random() * 100}%;
-      animation: float ${Math.random() * 20 + 10}s ease-in-out infinite;
-      animation-delay: ${Math.random() * 5}s;
-      opacity: 0.3;
-    `;
-    canvas.appendChild(shape);
-  }
-}
-
-// ============================================
-// Counter Animation
-// ============================================
-function animateCounter(element, target, duration = 2000) {
-  let current = 0;
-  const increment = target / (duration / 16);
-  
-  const timer = setInterval(() => {
-    current += increment;
-    if (current >= target) {
-      element.textContent = Math.floor(target);
-      clearInterval(timer);
-    } else {
-      element.textContent = Math.floor(current);
-    }
-  }, 16);
-}
-
-// Activate counters on scroll
-const counterObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const counters = entry.target.querySelectorAll('[data-count]');
-      counters.forEach(counter => {
-        const target = parseInt(counter.getAttribute('data-count'));
-        animateCounter(counter, target);
-      });
-      counterObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.5 });
-
-const statsSection = document.querySelector('.features-section');
-if (statsSection) {
-  counterObserver.observe(statsSection);
-}
-
-// ============================================
-// Image Lazy Loading with Fade In
-// ============================================
-const imageObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const img = entry.target;
-      img.style.opacity = '0';
-      img.src = img.dataset.src;
-      img.addEventListener('load', () => {
-        img.style.transition = 'opacity 0.8s ease';
-        img.style.opacity = '1';
-      });
-      imageObserver.unobserve(img);
-    }
-  });
-});
-
-document.querySelectorAll('img[data-src]').forEach(img => {
-  imageObserver.observe(img);
-});
-
-// ============================================
-// Custom Cursor (Optional - Premium Effect)
-// ============================================
-function initCustomCursor() {
-  const cursor = document.createElement('div');
-  cursor.className = 'custom-cursor';
-  cursor.style.cssText = `
-    width: 20px;
-    height: 20px;
-    border: 2px solid #D4AF37;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 10000;
-    transition: transform 0.2s ease;
-    mix-blend-mode: difference;
-  `;
-  document.body.appendChild(cursor);
-  
-  const cursorDot = document.createElement('div');
-  cursorDot.style.cssText = `
-    width: 4px;
-    height: 4px;
-    background: #D4AF37;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 10001;
-  `;
-  document.body.appendChild(cursorDot);
-  
-  let mouseX = 0, mouseY = 0;
-  let cursorX = 0, cursorY = 0;
-  
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursorDot.style.left = mouseX + 'px';
-    cursorDot.style.top = mouseY + 'px';
-  });
-  
-  function animate() {
-    cursorX += (mouseX - cursorX) * 0.15;
-    cursorY += (mouseY - cursorY) * 0.15;
-    
-    cursor.style.left = cursorX - 10 + 'px';
-    cursor.style.top = cursorY - 10 + 'px';
-    
-    requestAnimationFrame(animate);
-  }
-  animate();
-  
-  // Scale cursor on hover
-  document.querySelectorAll('a, button, .car-card').forEach(element => {
-    element.addEventListener('mouseenter', () => {
-      cursor.style.transform = 'scale(1.5)';
-    });
-    element.addEventListener('mouseleave', () => {
-      cursor.style.transform = 'scale(1)';
-    });
-  });
-}
-
-// Uncomment to enable custom cursor
-// if (window.innerWidth > 768) {
-//   initCustomCursor();
-// }
-
-// ============================================
-// Typing Effect for Headlines
-// ============================================
-function typeWriter(element, text, speed = 100) {
-  let i = 0;
-  element.textContent = '';
-  
-  function type() {
-    if (i < text.length) {
-      element.textContent += text.charAt(i);
-      i++;
-      setTimeout(type, speed);
-    }
-  }
-  
-  type();
-}
-
-// ============================================
-// Car Filter (if needed for fleet page)
-// ============================================
-function filterCars(category) {
-  const cards = document.querySelectorAll('.car-card');
-  
-  cards.forEach(card => {
-    const cardCategory = card.getAttribute('data-category');
-    
-    if (category === 'all' || cardCategory === category) {
-      card.style.display = 'block';
-      card.style.animation = 'fadeInUp 0.6s ease-out';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-}
-
-// ============================================
-// Initialize All Animations
-// ============================================
-document.addEventListener('DOMContentLoaded', () => {
-  // Add reveal class to elements
-  document.querySelectorAll('.feature-card, .car-card, .contact-item').forEach(el => {
+  // Ajout automatique de la classe reveal aux éléments concernés
+  document.querySelectorAll('.feature-card, .car-card, .contact-item, .section-header').forEach(el => {
     el.classList.add('reveal');
   });
-  
-  // Initial reveal check
-  setTimeout(revealElements, 100);
-  
-  console.log('🚗 Luxury Car Rental Website Loaded');
-  console.log('✨ All animations initialized');
+
+  // Premier check reveal
+  setTimeout(revealElements, 300);
+
+  console.log('Site premium chargé – animations et menu mobile activés');
 });
-
-// ============================================
-// Reservation Quick Form (Optional)
-// ============================================
-function quickReservation(carName) {
-  const message = `Je souhaite réserver le véhicule: ${carName}`;
-  const contactSection = document.querySelector('.contact-section');
-  
-  if (contactSection) {
-    contactSection.scrollIntoView({ behavior: 'smooth' });
-    
-    setTimeout(() => {
-      const messageField = document.getElementById('message');
-      if (messageField) {
-        messageField.value = message;
-        messageField.focus();
-      }
-    }, 800);
-  }
-}
-
-// ============================================
-// Performance Optimization
-// ============================================
-// Debounce function for scroll events
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-// Apply debounce to scroll-heavy functions
-const debouncedReveal = debounce(revealElements, 50);
-window.removeEventListener('scroll', revealElements);
-window.addEventListener('scroll', debouncedReveal);
-
-// ============================================
-// Galerie photo index
-// ============================================
-
-const slider = document.querySelector('.slider');
-const slides = document.querySelectorAll('.slider img');
-
-let index = 0;
-const interval = 4000; // 4 secondes
-
-function slideNext() {
-  index++;
-  if (index >= slides.length) {
-    index = 0;
-  }
-  slider.style.transform = `translateX(-${index * 100}%)`;
-}
-
-setInterval(slideNext, interval);
-
-
-
-
-
-function animateCounter(element, target) {
-  let start = 0;
-  const duration = 2000; // durée en ms
-  const startTime = performance.now();
-
-  function update(currentTime) {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-
-    const value = Math.floor(progress * target);
-    element.textContent = value;
-
-    if (progress < 1) {
-      requestAnimationFrame(update);
-    } else {
-      element.textContent = target; // valeur finale exacte
-    }
-  }
-
-  requestAnimationFrame(update);
-}
-
