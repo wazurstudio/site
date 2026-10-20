@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Encodage et affichage responsive -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Référencement SEO -->
+    <title>Contact et devis | Wazur Studio</title>
+
+    <meta
+        name="description"
+        content="Demandez un devis gratuit pour la retouche de vos photos immobilières. Wazur Studio vous répond sous un jour ouvré."
+    >
+
+    <link
+        rel="canonical"
+        href="https://www.wazur-studio.fr/contact.html"
+    >
+
+    <!-- Partage sur les réseaux sociaux -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Wazur Studio">
+    <meta property="og:title" content="Contact et devis | Wazur Studio">
+    <meta
+        property="og:description"
+        content="Demandez un devis gratuit pour la retouche de vos photos immobilières. Wazur Studio vous répond sous un jour ouvré."
+    >
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%231273d9'/%3E%3Cpath d='M16 2a14 14 0 0 1 0 28z' fill='%23f4b942'/%3E%3C/svg%3E"
+    >
+
+    <!-- Police d'écriture -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&display=swap"
+    >
+
+    <!-- Feuille de style commune -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript commun -->
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Lien d'accessibilité pour passer directement au contenu -->
+    <a class="skip" href="#main">
+        Aller au contenu
+    </a>
+
+    <!-- ==================== EN-TÊTE ==================== -->
+    <header class="header">
+        <div class="container header__in">
+
+            <!-- Logo -->
+            <a
+                class="logo"
+                href="index.html"
+                aria-label="Wazur Studio, accueil"
+            >
+                Wazur Studio
+            </a>
+
+            <!-- Bouton du menu mobile -->
+            <button
+                class="burger"
+                type="button"
+                aria-expanded="false"
+                aria-controls="nav"
+                aria-label="Ouvrir le menu"
+            ></button>
+
+            <!-- Navigation principale -->
+            <nav
+                id="nav"
+                class="nav"
+                aria-label="Navigation principale"
+            >
+                <a href="index.html">Accueil</a>
+                <a href="a-propos.html">À propos</a>
+                <a href="services.html">Services</a>
+
+                <a
+                    class="btn btn--sm"
+                    href="contact.html"
+                    aria-current="page"
+                >
+                    Demander un devis
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- ==================== CONTENU PRINCIPAL ==================== -->
+    <main id="main">
+
+        <!-- Titre de la page -->
+        <section class="page-head">
+            <div class="container">
+
+                <h1>Demandez votre devis.</h1>
+
+                <p class="lead">
+                    Décrivez votre besoin. Nous vous répondons sous un
+                    jour ouvré avec un tarif et un délai.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- ==================== FORMULAIRE DE CONTACT ==================== -->
+        <section class="section">
+            <div class="container split split--form">
+
+                <!-- Formulaire d'envoi -->
+                <!-- Remplacez VOTRE_ID par votre identifiant Formspree -->
+                <form
+                    id="contact-form"
+                    class="form"
+                    action="https://formspree.io/f/VOTRE_ID"
+                    method="POST"
+                    novalidate
+                >
+
+                    <!-- Nom et prénom -->
+                    <div class="field">
+                        <label for="name">
+                            Nom et prénom
+                        </label>
+
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            autocomplete="name"
+                            required
+                        >
+
+                        <p class="error" role="alert"></p>
+                    </div>
+
+                    <!-- Adresse e-mail -->
+                    <div class="field">
+                        <label for="email">
+                            Adresse e-mail
+                        </label>
+
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <p class="error" role="alert"></p>
+                    </div>
+
+                    <!-- Nom de l'agence, facultatif -->
+                    <div class="field">
+                        <label for="agency">
+                            Agence (facultatif)
+                        </label>
+
+                        <input
+                            id="agency"
+                            name="agency"
+                            type="text"
+                            autocomplete="organization"
+                        >
+                    </div>
+
+                    <!-- Type de prestation souhaitée -->
+                    <div class="field">
+                        <label for="need">
+                            Votre besoin
+                        </label>
+
+                        <select id="need" name="need">
+                            <option value="Retouche HDR et lumière">
+                                Retouche HDR et lumière
+                            </option>
+
+                            <option value="Ciel et extérieurs">
+                                Ciel et extérieurs
+                            </option>
+
+                            <option value="Désencombrement">
+                                Désencombrement
+                            </option>
+
+                            <option value="Home staging virtuel">
+                                Home staging virtuel
+                            </option>
+
+                            <option value="Je ne sais pas encore">
+                                Je ne sais pas encore
+                            </option>
+                        </select>
+                    </div>
+
+                    <!-- Message du client -->
+                    <div class="field">
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            required
+                            placeholder="Nombre de photos, type de biens, délai souhaité…"
+                        ></textarea>
+
+                        <p class="error" role="alert"></p>
+                    </div>
+
+                    <!-- Consentement -->
+                    <div class="field field--check">
+                        <label for="consent">
+                            <input
+                                id="consent"
+                                type="checkbox"
+                                name="consent"
+                                value="Oui"
+                                required
+                            >
+
+                            J’accepte que Wazur Studio utilise ces
+                            informations pour répondre à ma demande.
+                        </label>
+
+                        <p class="error" role="alert"></p>
+                    </div>
+
+                    <!-- Champ anti-spam invisible -->
+                    <div class="honey" aria-hidden="true">
+                        <label for="website">
+                            Ne pas remplir
+
+                            <input
+                                id="website"
+                                type="text"
+                                name="website"
+                                tabindex="-1"
+                                autocomplete="off"
+                            >
+                        </label>
+                    </div>
+
+                    <!-- Bouton d'envoi -->
+                    <div>
+                        <button class="btn" type="submit">
+                            Envoyer ma demande
+                        </button>
+                    </div>
+
+                    <!-- Message de confirmation ou d'erreur -->
+                    <p
+                        class="form__status"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+
+                <!-- ==================== COORDONNÉES ==================== -->
+                <aside class="aside">
+
+                    <h2>Nous joindre</h2>
+
+                    <p>
+                        <strong>E-mail</strong><br>
+                        <a href="mailto:wazurstudio.contact@gmail.com">
+                            wazurstudio.contact@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Zone</strong><br>
+                        France entière, 100 % à distance.
+                    </p>
+
+                    <p>
+                        <strong>Réponse</strong><br>
+                        Sous un jour ouvré.
+                    </p>
+
+                </aside>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== PIED DE PAGE ==================== -->
+    <footer class="footer">
+        <div class="container footer__in">
+
+            <!-- Présentation -->
+            <div>
+                <strong>Wazur Studio</strong>
+
+                <p>
+                    Retouche photo pour l’immobilier.
+                </p>
+
+                <p>
+                    <a href="mailto:wazurstudio.contact@gmail.com">
+                        wazurstudio.contact@gmail.com
+                    </a>
+                </p>
+            </div>
+
+            <!-- Navigation du pied de page -->
+            <nav aria-label="Pied de page">
+                <a href="index.html">Accueil</a>
+                <a href="a-propos.html">À propos</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <!-- Mentions de copyright -->
+            <p class="footer__legal">
+                © <span data-year>2026</span>
+                Wazur Studio. Tous droits réservés.
+            </p>
+
+        </div>
+    </footer>
+
+</body>
+</html>
