@@ -1,132 +1,503 @@
+
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+    <!-- Encodage et affichage responsive -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WazurStudio - Création de Sites Web</title>
-    <link rel="canonical" href="https://www.wazurstudio.com/" />
-    <link rel="icon" href="./photo/wazur.png" sizes="any">
-    <link rel="icon" href="./photo/wazur.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="test.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- SEO -->
+    <title>Wazur Studio | Retouche photo immobilière</title>
+
+    <meta
+        name="description"
+        content="Wazur Studio retouche vos photos immobilières : lumière, couleurs, ciel et perspective. Livraison sous 24 à 48 h pour agents et agences."
+    >
+
+    <link
+        rel="canonical"
+        href="https://www.wazur-studio.fr/index.html"
+    >
+
+    <!-- Open Graph : aperçu lors du partage -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Wazur Studio">
+
+    <meta
+        property="og:title"
+        content="Wazur Studio | Retouche photo immobilière"
+    >
+
+    <meta
+        property="og:description"
+        content="Des photos immobilières lumineuses et professionnelles, prêtes à publier sous 24 à 48 h."
+    >
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%231273d9'/%3E%3Cpath d='M16 2a14 14 0 0 1 0 28z' fill='%23f4b942'/%3E%3C/svg%3E"
+    >
+
+    <!-- Police de caractères -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&display=swap"
+    >
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript principal -->
+    <script src="main.js" defer></script>
+
+    <!-- Données structurées SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Wazur Studio",
+        "description": "Retouche photo immobilière pour agents et agences.",
+        "url": "https://www.wazur-studio.fr/",
+        "email": "contact@wazur-studio.fr",
+        "areaServed": {
+            "@type": "Country",
+            "name": "France"
+        }
+    }
+    </script>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <h1>wazur<span class="studio">STUDIO</span></h1>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="service.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="tarif.html">Tarifs</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
+
+    <!-- Lien d'accessibilité -->
+    <a class="skip" href="#main">
+        Aller au contenu
+    </a>
+
+
+    <!-- =========================================
+         HEADER ET NAVIGATION
+    ========================================== -->
+
+    <header class="header">
+
+        <div class="container header__in">
+
+            <!-- Logo -->
+            <a
+                class="logo"
+                href="index.html"
+                aria-label="Wazur Studio, accueil"
+            >
+                Wazur Studio
+            </a>
+
+            <!-- Bouton du menu mobile -->
+            <button
+                class="burger"
+                type="button"
+                aria-expanded="false"
+                aria-controls="nav"
+                aria-label="Ouvrir le menu"
+            ></button>
+
+            <!-- Navigation principale -->
+            <nav
+                id="nav"
+                class="nav"
+                aria-label="Navigation principale"
+            >
+                <a href="index.html" aria-current="page">
+                    Accueil
+                </a>
+
+                <a href="a-propos.html">
+                    À propos
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a class="btn btn--sm" href="contact.html">
+                    Demander un devis
+                </a>
+            </nav>
+
+        </div>
+
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2 class="hero-title">Créons ensemble votre présence digitale</h2>
-                <p class="hero-subtitle">Des sites web modernes, performants et sur mesure pour propulser votre entreprise</p>
-                <div class="hero-buttons">
-                    <a href="contact.html" class="btn btn-primary">Démarrer un projet</a>
-                    <a href="portfolio.html" class="btn btn-secondary">Voir nos réalisations</a>
-                </div>
-            </div>
-            <div class="hero-animation">
-                <div class="floating-card card-1"><img src="./photo/web.jpg" class="rounded" alt="image pc code" width="250px" height="180px"/></div>
-                <div class="floating-card card-2"><img src="./photo/code.png" class="rounded" alt="Wazur Studio" width="200px" height="150px"/></div>
-                <div class="floating-card card-3"><img src="./photo/WazurStudio.png" class="rounded" alt="log Wazur Studio" width="180px" height="130px"/></div>
-            </div>
-        </div>
-    </section>
 
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Pourquoi choisir WazurStudio ?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Performance optimale</h3>
-                    <p>Des sites ultra-rapides optimisés pour le SEO et l'expérience utilisateur</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Design moderne</h3>
-                    <p>Des interfaces élégantes et intuitives qui reflètent votre identité</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Responsive</h3>
-                    <p>Parfaitement adapté à tous les écrans, du mobile au desktop</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- =========================================
+         CONTENU PRINCIPAL
+    ========================================== -->
 
-    <section class="cta">
-        <div class="container">
-            <h2>Prêt à transformer votre vision en réalité ?</h2>
-            <p>Contactez-nous dès aujourd'hui pour discuter de votre projet</p>
-            <a href="contact.html" class="btn btn-primary">Nous contacter</a>
-        </div>
-    </section>
+    <main id="main">
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Wazur<span class="studio">Studio</span></h3>
-                    <p>Votre partenaire pour une présence web exceptionnelle</p>
+
+        <!-- =====================================
+             1. SECTION D'ACCUEIL
+        ====================================== -->
+
+        <section class="hero">
+
+            <div class="container">
+
+                <!-- Titre et présentation -->
+                <div class="hero__top">
+
+                    <h1>
+                        Des photos de biens qui donnent envie de visiter.
+                    </h1>
+
+                    <div>
+
+                        <p class="lead">
+                            Wazur Studio retouche vos photos immobilières :
+                            lumière, couleurs, ciel et perspective.
+                            Vous envoyez vos fichiers et recevez des visuels
+                            prêts à publier sous 24 à 48 h.
+                        </p>
+
+                        <!-- Boutons d'action -->
+                        <div class="actions">
+
+                            <a class="btn" href="contact.html">
+                                Demander un devis
+                            </a>
+
+                            <a class="btn btn--ghost" href="services.html">
+                                Voir les services
+                            </a>
+
+                        </div>
+
+                    </div>
+
                 </div>
-                <div class="footer-section">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="service.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="tarif.html">Tarifs</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <a href="mailto:wazurstudio.contact@gmail.com?subject=Demande%20de%20devis">wazurstudio.contact@gmail.com</a></br>
-                    <a href="tel:+33786407475">+33 7 86 40 74 75</a>
-                </div>
+
+
+                <!-- Comparateur photo avant / après -->
+                <figure>
+
+                    <div class="ba">
+
+                        <!-- Photo avant retouche -->
+                        <div class="ba__layer scene scene--before">
+
+                            <img
+                                src="img/avant.jpg"
+                                alt="Photo du bien immobilier avant retouche"
+                            >
+
+                        </div>
+
+                        <!-- Photo après retouche -->
+                        <div class="ba__layer ba__layer--after scene">
+
+                            <img
+                                src="img/apres.png"
+                                alt="Photo du même bien immobilier après retouche"
+                            >
+
+                        </div>
+
+                        <!-- Libellés -->
+                        <span class="ba__label ba__label--l">
+                            Avant
+                        </span>
+
+                        <span class="ba__label ba__label--r">
+                            Après
+                        </span>
+
+                        <!-- Ligne de séparation -->
+                        <span
+                            class="ba__bar"
+                            aria-hidden="true"
+                        ></span>
+
+                        <!-- Curseur de comparaison -->
+                        <input
+                            type="range"
+                            min="0"
+                            max="100"
+                            value="50"
+                            aria-label="Faire glisser pour comparer les photos avant et après retouche"
+                        >
+
+                    </div>
+
+                    <figcaption>
+                        Faites glisser pour comparer.
+                        Visuels de démonstration à remplacer par vos propres réalisations.
+                    </figcaption>
+
+                </figure>
+
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 WazurStudio. Tous droits réservés.</p>
+
+        </section>
+
+
+        <!-- =====================================
+             2. AVANTAGES
+        ====================================== -->
+
+        <section class="section section--brume">
+
+            <div class="container">
+
+                <h2>Ce que vous gagnez</h2>
+
+                <div class="cols">
+
+                    <!-- Avantage 1 -->
+                    <article>
+
+                        <h3>
+                            Des annonces qui se démarquent
+                        </h3>
+
+                        <p>
+                            Des images lumineuses et nettes retiennent
+                            l’attention dès la première seconde,
+                            sur les portails comme sur les réseaux.
+                        </p>
+
+                    </article>
+
+                    <!-- Avantage 2 -->
+                    <article>
+
+                        <h3>
+                            Des heures récupérées
+                        </h3>
+
+                        <p>
+                            Vous gardez le temps pour les visites
+                            et la négociation. Nous prenons la retouche
+                            en charge.
+                        </p>
+
+                    </article>
+
+                    <!-- Avantage 3 -->
+                    <article>
+
+                        <h3>
+                            Une image cohérente
+                        </h3>
+
+                        <p>
+                            Un rendu homogène sur tous vos biens,
+                            de l’appartement à la villa,
+                            quel que soit le photographe.
+                        </p>
+
+                    </article>
+
+                </div>
+
             </div>
+
+        </section>
+
+
+        <!-- =====================================
+             3. ENGAGEMENT ET TRANSPARENCE
+        ====================================== -->
+
+        <section class="section">
+
+            <div class="container split">
+
+                <h2>
+                    Retouché, jamais trompeur.
+                </h2>
+
+                <div>
+
+                    <p class="lead">
+                        Nous corrigeons la lumière, les couleurs
+                        et les distractions. Nous ne cachons ni défaut,
+                        ni nuisance, ni modification de structure.
+                    </p>
+
+                    <p>
+                        L’acheteur doit retrouver à la visite le bien
+                        qu’il a vu en photo. C’est la meilleure garantie
+                        de confiance pour votre agence.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             4. ÉTAPES DU SERVICE
+        ====================================== -->
+
+        <section class="section section--brume">
+
+            <div class="container">
+
+                <h2>Comment ça se passe</h2>
+
+                <ol class="steps">
+
+                    <!-- Étape 1 -->
+                    <li>
+
+                        <h3>
+                            Vous envoyez vos photos
+                        </h3>
+
+                        <p>
+                            Par lien de transfert, en JPEG ou en RAW,
+                            avec vos consignes éventuelles.
+                        </p>
+
+                    </li>
+
+                    <!-- Étape 2 -->
+                    <li>
+
+                        <h3>
+                            Nous retouchons
+                        </h3>
+
+                        <p>
+                            Chaque image est traitée à la main,
+                            puis contrôlée avant envoi.
+                        </p>
+
+                    </li>
+
+                    <!-- Étape 3 -->
+                    <li>
+
+                        <h3>
+                            Vous validez
+                        </h3>
+
+                        <p>
+                            Vous recevez les fichiers sous 24 à 48 h.
+                            Une série de corrections est incluse.
+                        </p>
+
+                    </li>
+
+                </ol>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             5. APPEL À L'ACTION
+        ====================================== -->
+
+        <section class="cta">
+
+            <div class="container split">
+
+                <h2>
+                    Envoyez-nous vos premières photos.
+                </h2>
+
+                <div>
+
+                    <p>
+                        Décrivez votre besoin.
+                        Nous vous répondrons avec un devis clair
+                        et un délai précis.
+                    </p>
+
+                    <a class="btn btn--sun" href="contact.html">
+                        Demander un devis
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         PIED DE PAGE
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer__in">
+
+            <!-- Informations de l'entreprise -->
+            <div>
+
+                <strong>Wazur Studio</strong>
+
+                <p>
+                    Retouche photo pour l’immobilier.
+                </p>
+
+                <p>
+                    <a href="mailto:wazurstudio.contact@gmail.com">
+                        wazurstudio.contact@gmail.com
+                    </a>
+                </p>
+
+            </div>
+
+            <!-- Navigation secondaire -->
+            <nav aria-label="Navigation de pied de page">
+
+                <a href="index.html">
+                    Accueil
+                </a>
+
+                <a href="a-propos.html">
+                    À propos
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+            <!-- Copyright -->
+            <p class="footer__legal">
+                © <span data-year>2026</span>
+                Wazur Studio. Tous droits réservés.
+            </p>
+
         </div>
+
     </footer>
 
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </body>
 </html>
