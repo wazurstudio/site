@@ -1,3 +1,4 @@
+
 /* =========================================================
  *   WAZUR STUDIO — FEUILLE DE STYLE COMPLÈTE
  *   1. Variables
@@ -844,3 +845,77 @@ figcaption {
         margin-bottom: 0.5rem;
     }
 }
+
+
+/* =========================================================
+ *   10. PAGE TARIFS
+ *   ========================================================= */
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    align-items: stretch;
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem;
+    border: 1px solid var(--ligne);
+    border-top: 4px solid var(--azur);
+    border-radius: var(--r);
+    background: #fff;
+}
+
+.pricing-card--featured {
+    border-top-color: var(--soleil);
+    background: var(--brume);
+}
+
+.pricing-card h2 {
+    font-size: 1.45rem;
+    margin-bottom: 0.75rem;
+}
+
+.pricing-card p {
+    margin-bottom: 1rem;
+}
+
+.pricing-card ul {
+    padding-left: 1.2rem;
+    margin: 0 0 1.5rem;
+}
+
+.pricing-card li {
+    margin: 0.45rem 0;
+}
+
+.pricing-card .btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.pricing-note {
+    margin-top: 1.5rem;
+    padding: 1rem 1.2rem;
+    border-left: 3px solid var(--soleil);
+    background: var(--brume);
+}
+
+.pricing-faq {
+    max-width: 850px;
+}
+
+@media (max-width: 800px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Tarifs */
+.pricing-price { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; line-height: 1.15; margin: .7rem 0; }
+.pricing-price span { font-size: .95rem; font-weight: 500; }
+.pricing-detail { font-weight: 600; }
+.pricing-badge { display: inline-block; padding: .35rem .7rem; border-radius: 999px; font-size: .8rem; font-weight: 700; margin: 0 0 .5rem; background: #f4b942; color: #172033; }
